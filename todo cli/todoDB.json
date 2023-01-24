@@ -1,1 +1,12 @@
-{}
+{
+    "name": "Ravi",
+    "date": "2023-01-09",
+    "today": [
+        {
+            "task_id": 0,
+            "description": "kjk",
+            "scheduled_time": "8000",
+            "status": "TBD"
+        }
+    ]
+}

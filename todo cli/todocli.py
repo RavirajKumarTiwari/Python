@@ -70,13 +70,18 @@ while True:
             print("If you want to add more task, type add task /create task\n")
             print("If you're done for now, please type done\n")
 
+        elif cmd == "delete all tasks":
+            todoData["today"] = []
+            with open("todoDB.json", "r+") as f:
+                f.seek(0)
+                json.dump(todoData, f, indent=4)
+            print("\nTasks deleted successfully")
+        elif cmd == "delete user":
+            todoData = {}
+            with open("todoDB.json", "w") as f:
+                json.dump(todoData, f, indent=4)
+            print("\nUser deleted successfully")
 
         if cmd == "done" or cmd == "exit":
-            print("Have a great day!!")
+            print("\nHave a great day!!")
             break
-        
-#your task is to delete whole data of todoDB.json
-        if cmd == "clear" or "clear":
-            with open("todoDB.json", "w") as f:
-                print(todoData)
-                # del todoData[1:]
